@@ -80,6 +80,20 @@ class Trigger(object):
 # Problems 2-5
 
 # TODO: WordTrigger
+class WordTrigger(Trigger):
+    def __init__(self,word):
+        self.word=word
+    def  is_word_in(self,text):
+        nword=word.lower()
+        nwtext=nwtext.lower()
+        for i in nwtext:
+	           if i in string.punctuation:
+		             nwtext=nwtext.replace(i,' ')
+        s=nwtext.split(' ')
+        if word in s:
+            return True
+        else:
+            return False
 
 # TODO: TitleTrigger
 # TODO: SubjectTrigger
